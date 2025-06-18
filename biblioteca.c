@@ -35,8 +35,6 @@ void AdicionaAnime() {
 
     } while (VerificaNota(x.nota) == 0);
 
-    
-
     printf("Digite a review do anime: ");
     fgets(x.review, sizeof(x.review), stdin);
     strtok(x.review, "\n");
@@ -55,8 +53,6 @@ void MostraAnime() {
         printf("Erro ao abrir o arquivo.\n");
         return;
     }
-
-    
 
     while (fread(&x, sizeof(Anime), 1, file) == 1) {
         printf("Título: %s\n", x.titulo);
@@ -125,7 +121,6 @@ void QuantidadeAnime() {
     int i = 0;
     FILE *file = fopen("biblioteca.dat", "rb");
 
-    
     while (fread(&x, sizeof(Anime), 1, file) == 1) {
         i++;
     }
