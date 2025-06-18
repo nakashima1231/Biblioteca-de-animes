@@ -120,6 +120,23 @@ void RetiraAnime() {
     rename("temp.dat", "biblioteca.dat");
 }
 
+void QuantidadeAnime() {
+    Anime x;
+    int i = 0;
+    FILE *file = fopen("biblioteca.dat", "rb");
+
+    
+    while (fread(&x, sizeof(Anime), 1, file) == 1) {
+        i++;
+    }
+
+    printf("---------------------------------\n");
+    printf("Total de animes: %d\n", i);
+    printf("---------------------------------\n");
+    
+    fclose(file);
+}
+
 int main() {
     int resposta;
 
@@ -130,7 +147,8 @@ int main() {
         printf("Digite 1 para adicionar um anime.\n" );
         printf("Digite 2 para remover um anime.\n");
         printf("Digite 3 para listar os animes.\n");
-        printf("      Digite 4 para sair.\n"      );
+        printf("Digite 4 para mostrar o total de animes.\n");
+        printf("      Digite 5 para sair.\n"      );
         printf("---------------------------------\n");
         scanf("%d", &resposta);
         getchar();
@@ -149,6 +167,10 @@ int main() {
             break;
 
             case 4:
+            QuantidadeAnime();
+            break;
+
+            case 5:
             printf("Ate a proxima!");
             break;
 
@@ -158,9 +180,8 @@ int main() {
             break;
         }
 
-    } while(resposta != 4);
+    } while(resposta != 5);
 
-    
     return 0;
 }
 
