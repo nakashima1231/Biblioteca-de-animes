@@ -34,11 +34,11 @@ O programa atualmente possui 3 funções
 
 ## Observações
 O programa ainda se encontra em mudanças, sendo as próximas:
-1. Editar as informações de um anime já listado
-2. Visualizar somente um anime específico
-3. Melhorar as entradas, prevenindo overflow
-4. Confirmação ao excluir um anime
-5. Mostrar o total de animes na lista
+1. Editar as informações de um anime já listado [ ]
+2. Visualizar somente um anime específico [ ]
+3. Melhorar as entradas, prevenindo overflow [ ]
+4. Confirmação ao excluir um anime [ ]
+5. Mostrar o total de animes na lista [X]
 
 ## Autor
 Gabriel Makiyama Nakashima  
